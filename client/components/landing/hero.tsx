@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import { ArrowRight, Play, Sparkles, CheckCircle2, Shield, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Spotlight, AuroraBackground } from "@/components/aceternity/spotlight";
+import { Spotlight } from "@/components/aceternity/spotlight";
 import { SparklesCore } from "@/components/aceternity/sparkles";
 import { FlipWords } from "@/components/aceternity/flip-words";
 import { HeroHighlight, Highlight } from "@/components/aceternity/hero-highlight";
 import { MovingBorderButton } from "@/components/aceternity/moving-border";
+import { BackgroundCubesGrid } from "@/components/ui/background-cubes-grid";
 import { AuthModal } from "@/components/landing/auth-modal";
 import { DemoModal } from "@/components/landing/demo-modal";
 
@@ -23,19 +24,33 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 overflow-hidden bg-grid-pattern">
-      {/* Background Spotlight & Aurora Glow */}
-      <Spotlight className="-top-40 left-0 md:left-48 md:-top-20" fill="#10B981" />
-      <SparklesCore
-        particleColor="#10B981"
-        particleDensity={35}
-        minSize={0.6}
-        maxSize={2.2}
-        className="opacity-70"
+    <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-[#000000] pt-24 pb-16 sm:pt-28 sm:pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Aceternity UI: Background Cubes Grid (Official 3D Perspective Grid with Emerald Wave Animation) */}
+      <BackgroundCubesGrid
+        variant="perspective"
+        backgroundColor="#000000"
+        baseColor="#0f1914"
+        waveColor="#10B981"
+        gridSize={48}
+        gap={0.06}
+        glow={1.2}
+        amplitude={0.65}
+        tilt={0.74}
+        idleRipples={true}
+        className="opacity-75 z-0"
       />
 
-      <AuroraBackground>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Background Spotlight & Ambient Sparkles */}
+      <Spotlight className="-top-40 left-0 md:left-48 md:-top-20 z-[2]" fill="#10B981" />
+      <SparklesCore
+        particleColor="#10B981"
+        particleDensity={20}
+        minSize={0.6}
+        maxSize={1.8}
+        className="opacity-40 z-[2]"
+      />
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto my-auto flex flex-col items-center justify-center">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* Announcement Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#10B981]/30 bg-[#10B981]/10 text-xs text-[#10B981] font-medium mb-6 shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:border-[#10B981]/60 transition-all cursor-pointer">
@@ -108,7 +123,6 @@ export function Hero() {
             </div>
           </div>
         </div>
-      </AuroraBackground>
 
       {/* Modals */}
       <AuthModal open={authOpen} onOpenChange={setAuthOpen} />
