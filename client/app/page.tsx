@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/landing/navbar";
 import { Hero } from "@/components/landing/hero";
+import { ProductPreview } from "@/components/landing/product-preview";
 import { SocialProof } from "@/components/landing/social-proof";
 import { FeaturesGrid } from "@/components/landing/features-grid";
 import { EditorShowcase } from "@/components/landing/editor-showcase";
@@ -9,39 +10,64 @@ import { Testimonials } from "@/components/landing/testimonials";
 import { FinalCTA } from "@/components/landing/final-cta";
 import { Footer } from "@/components/landing/footer";
 
+function SectionDivider() {
+  return (
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#10B981]/30 to-transparent" />
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-[#8FA19A] flex flex-col selection:bg-[#10B981] selection:text-black">
-      {/* 1. Navbar */}
+    <div className="min-h-screen bg-[#0A0F0D] text-[#8FA19A] flex flex-col selection:bg-[#10B981] selection:text-[#0A0F0D]">
+      {/* 1. Aceternity Floating Navbar */}
       <Navbar />
 
       <main className="flex-1">
-        {/* 2. Hero Section (with Typewriter Headline, CTAs & 3D Editor Mockup) */}
+        {/* 2. Hero Section (Spotlight + Sparkles + Flip Words + Hero Highlight + Moving Border CTA) */}
         <Hero />
 
-        {/* 3. Social Proof Section */}
+        {/* 3. Product Preview (Aceternity Container Scroll Animation with 3D Tilt) */}
+        <ProductPreview />
+
+        <SectionDivider />
+
+        {/* 4. Social Proof (Aceternity Infinite Moving Cards with Gradient Fade Edges) */}
         <SocialProof />
 
-        {/* 4. Features Grid (6 Glowing Cards) */}
+        <SectionDivider />
+
+        {/* 5. Features Grid (Aceternity Bento Grid + Cursor Glowing Effect + Placeholders & Vanish Input) */}
         <FeaturesGrid />
 
-        {/* 5. Editor Showcase (Split MDX Source & Live Rendered View) */}
+        <SectionDivider />
+
+        {/* 6. Editor Showcase (Aceternity Compare Slider) */}
         <EditorShowcase />
 
-        {/* 6. How It Works (3 Steps with Sticky Scroll Reveal) */}
+        <SectionDivider />
+
+        {/* 7. How It Works (Aceternity Sticky Scroll Reveal) */}
         <HowItWorks />
 
-        {/* 7. Pricing Section (3 Tiers with Pro Emerald Border Glow) */}
+        <SectionDivider />
+
+        {/* 8. Pricing Section (Aceternity Background Gradient Glow on Pro Tier) */}
         <Pricing />
 
-        {/* 8. Testimonials (Infinite Moving Cards) */}
+        <SectionDivider />
+
+        {/* 9. Testimonials (Aceternity Testimonials Marquee Grid Boxed) */}
         <Testimonials />
 
-        {/* 9. Final CTA (Full-Width Emerald-to-Teal Gradient Banner) */}
+        <SectionDivider />
+
+        {/* 10. Final CTA (Aceternity Lamp Container + Moving Border CTA) */}
         <FinalCTA />
       </main>
 
-      {/* 10. Footer */}
+      {/* 11. Footer (Aceternity Text Hover Effect + Dotted Grid Background) */}
       <Footer />
     </div>
   );

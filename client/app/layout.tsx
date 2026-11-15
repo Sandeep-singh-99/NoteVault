@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#000000",
+  themeColor: "#0A0F0D",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark h-full antialiased scroll-smooth">
-      <body className="min-h-full flex flex-col bg-black text-[#8FA19A] selection:bg-[#10B981] selection:text-black antialiased">
+      <body className="min-h-full flex flex-col bg-[#0A0F0D] text-[#8FA19A] selection:bg-[#10B981] selection:text-[#0A0F0D] antialiased">
         {children}
       </body>
     </html>

@@ -5,12 +5,14 @@ import { Users, FileText, Activity, Star } from "lucide-react";
 
 export function SocialProof() {
   const logos = [
-    { name: "Vercel", label: "VERCEL" },
-    { name: "Linear", label: "LINEAR" },
-    { name: "Supabase", label: "SUPABASE" },
-    { name: "Raycast", label: "RAYCAST" },
-    { name: "Resend", label: "RESEND" },
-    { name: "Prisma", label: "PRISMA" },
+    { name: "Vercel", label: "VERCEL", highlight: "Next.js Engine" },
+    { name: "Linear", label: "LINEAR", highlight: "Issue Sync" },
+    { name: "Supabase", label: "SUPABASE", highlight: "Postgres Realtime" },
+    { name: "Raycast", label: "RAYCAST", highlight: "Quick Extensions" },
+    { name: "Resend", label: "RESEND", highlight: "Email Notifications" },
+    { name: "Prisma", label: "PRISMA", highlight: "Type-Safe DB" },
+    { name: "Loom", label: "LOOM", highlight: "Video Blocks" },
+    { name: "GitHub", label: "GITHUB", highlight: "Git Sync" },
   ];
 
   const stats = [
@@ -37,23 +39,31 @@ export function SocialProof() {
   ];
 
   return (
-    <section className="py-14 border-y border-white/5 bg-[#0E1512]/60">
+    <section className="py-16 sm:py-20 border-y border-white/5 bg-[#0E1512]/50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-mono uppercase tracking-widest text-[#8FA19A]">
-          TRUSTED BY MODERN PRODUCT & ENGINEERING TEAMS WORLDWIDE
+          POWERING HIGH-VELOCITY ENGINEERING TEAMS WORLDWIDE
         </p>
 
-        {/* Logos Bar */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-75">
-          {logos.map((logo) => (
-            <div
-              key={logo.name}
-              className="group flex items-center gap-2 text-sm font-semibold tracking-wider font-mono text-[#8FA19A] hover:text-[#F2F5F4] transition-colors"
-            >
-              <div className="h-2 w-2 rounded-full bg-white/20 group-hover:bg-[#10B981] transition-colors" />
-              <span>{logo.label}</span>
-            </div>
-          ))}
+        {/* Aceternity Moving Logo Cards with soft fade edges */}
+        <div className="mt-8 relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+          <div className="flex w-max animate-marquee gap-8 py-3">
+            {[...logos, ...logos].map((logo, idx) => (
+              <div
+                key={idx}
+                className="group flex items-center gap-3 px-5 py-2.5 rounded-xl border border-white/10 bg-[#141B18]/70 text-xs font-mono text-[#8FA19A] hover:text-[#F2F5F4] hover:border-[#10B981]/40 transition-all shrink-0 select-none cursor-pointer"
+              >
+                <div className="h-2 w-2 rounded-full bg-[#10B981] group-hover:scale-125 transition-transform" />
+                <span className="font-bold text-[#F2F5F4] tracking-wider">
+                  {logo.label}
+                </span>
+                <span className="text-white/20">•</span>
+                <span className="text-[11px] text-[#2DD4BF] opacity-80">
+                  {logo.highlight}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Stats Grid */}
@@ -63,7 +73,7 @@ export function SocialProof() {
             return (
               <div
                 key={idx}
-                className="rounded-xl border border-white/5 bg-[#141B18]/60 p-4 sm:p-5 flex flex-col justify-between hover:border-[#10B981]/30 transition-all hover:translate-y-[-2px]"
+                className="rounded-2xl border border-white/5 bg-[#141B18]/70 p-5 flex flex-col justify-between hover:border-[#10B981]/30 hover:-translate-y-1 transition-all"
               >
                 <div className="flex items-center justify-between text-[#8FA19A] mb-2">
                   <span className="text-xs uppercase tracking-wider font-mono">

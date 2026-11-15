@@ -123,7 +123,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 sm:py-28 relative">
+    <section id="how-it-works" className="py-24 sm:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <Badge variant="emeraldGlow" className="mb-4">

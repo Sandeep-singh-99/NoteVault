@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #000000;
+  --color-background: #0A0F0D;
   --color-surface: #141B18;
   --color-surface-hover: #192420;
   --color-surface-elevated: #1B2420;
@@ -19,7 +19,7 @@
 }
 
 :root {
-  --background: #000000;
+  --background: #0A0F0D;
   --foreground: #F2F5F4;
   --surface: #141B18;
   --surface-hover: #192420;
@@ -36,7 +36,7 @@
   --popover: #141B18;
   --popover-foreground: #F2F5F4;
   --primary: #10B981;
-  --primary-foreground: #000000;
+  --primary-foreground: #0A0F0D;
   --secondary: #192420;
   --secondary-foreground: #F2F5F4;
   --muted: #192420;
@@ -58,7 +58,7 @@ html {
 }
 
 body {
-  background-color: #000000;
+  background-color: #0A0F0D;
   color: #8FA19A;
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -66,7 +66,7 @@ body {
 
 ::selection {
   background-color: #10B981;
-  color: #000000;
+  color: #0A0F0D;
 }
 
 /* Custom scrollbar */
@@ -75,7 +75,7 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0A0F0D;
 }
 ::-webkit-scrollbar-thumb {
   background: #192420;
@@ -88,10 +88,10 @@ body {
 
 /* Glassmorphism helpers */
 .glass-nav {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(10, 15, 13, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card {

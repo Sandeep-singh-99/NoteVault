@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, MessageSquare } from "lucide-react";
 import { GithubIcon, TwitterIcon, YoutubeIcon } from "@/components/ui/icons";
+import { TextHoverEffect } from "@/components/aceternity/text-hover-effect";
 
 export function Footer() {
   const columns = [
@@ -21,7 +22,7 @@ export function Footer() {
     {
       title: "Developers",
       links: [
-        { label: "Documentation", href: "#docs" },
+        { label: "Documentation", href: "#" },
         { label: "Tiptap Extension API", href: "#" },
         { label: "MDX Component Specs", href: "#" },
         { label: "GitHub Repository", href: "https://github.com", external: true },
@@ -54,13 +55,16 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-black pt-16 pb-12 text-[#8FA19A]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
+    <footer className="border-t border-white/10 bg-[#0A0F0D] pt-16 pb-12 text-[#8FA19A] relative overflow-hidden">
+      {/* Subtle background grid pattern */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-25 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 pb-12">
           {/* Brand info column */}
           <div className="col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-black font-black text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-[#0A0F0D] font-black text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
                 N
               </div>
               <span className="text-base font-bold tracking-tight text-[#F2F5F4]">
@@ -146,8 +150,15 @@ export function Footer() {
           ))}
         </div>
 
+        {/* Aceternity Text Hover Effect on Brand Name */}
+        <div className="py-6 border-t border-white/10 overflow-hidden">
+          <div className="h-28 sm:h-36 md:h-44 w-full flex items-center justify-center">
+            <TextHoverEffect text="NOTEVAULT" />
+          </div>
+        </div>
+
         {/* Bottom copyright */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <div suppressHydrationWarning>
             &copy; 2026 NoteVault Inc. All rights reserved.
           </div>
