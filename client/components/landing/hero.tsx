@@ -1,10 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Play, Sparkles, CheckCircle2, Shield, Zap } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Spotlight } from "@/components/aceternity/spotlight";
-import { SparklesCore } from "@/components/aceternity/sparkles";
+import { ArrowRight, Play, CheckCircle2, Shield, Zap } from "lucide-react";
 import { FlipWords } from "@/components/aceternity/flip-words";
 import { HeroHighlight, Highlight } from "@/components/aceternity/hero-highlight";
 import { MovingBorderButton } from "@/components/aceternity/moving-border";
@@ -38,16 +35,6 @@ export function Hero() {
         tilt={0.74}
         idleRipples={true}
         className="opacity-75 z-0"
-      />
-
-      {/* Background Spotlight & Ambient Sparkles */}
-      <Spotlight className="-top-40 left-0 md:left-48 md:-top-20 z-[2]" fill="#10B981" />
-      <SparklesCore
-        particleColor="#10B981"
-        particleDensity={20}
-        minSize={0.6}
-        maxSize={1.8}
-        className="opacity-40 z-[2]"
       />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto my-auto flex flex-col items-center justify-center">
