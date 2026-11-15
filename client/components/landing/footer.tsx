@@ -54,13 +54,13 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-[#0A0F0D] pt-16 pb-12 text-[#8FA19A]">
+    <footer className="border-t border-white/10 bg-black pt-16 pb-12 text-[#8FA19A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand info column */}
           <div className="col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-[#0A0F0D] font-black text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-black font-black text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
                 N
               </div>
               <span className="text-base font-bold tracking-tight text-[#F2F5F4]">

@@ -48,15 +48,15 @@ export function Navbar() {
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           scrolled
             ? "glass-nav py-3.5 shadow-lg shadow-black/40"
-            : "bg-[#0A0F0D]/70 backdrop-blur-md border-b border-white/5 py-4"
+            : "bg-black/70 backdrop-blur-md border-b border-white/5 py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-[#0A0F0D] font-black text-lg shadow-[0_0_20px_rgba(16,185,129,0.35)] transition-transform duration-200 group-hover:scale-105">
+            <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-black font-black text-lg shadow-[0_0_20px_rgba(16,185,129,0.35)] transition-transform duration-200 group-hover:scale-105">
               <span className="font-mono text-base font-extrabold tracking-tighter">N</span>
-              <div className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-[#0A0F0D] flex items-center justify-center">
+              <div className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-black flex items-center justify-center">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#10B981] animate-pulse" />
               </div>
             </div>
@@ -137,7 +137,7 @@ export function Navbar() {
               variant="default"
               size="sm"
               onClick={() => setAuthOpen(true)}
-              className="bg-[#10B981] hover:bg-[#059669] text-[#0A0F0D] font-semibold shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all"
+              className="bg-[#10B981] hover:bg-[#059669] text-black font-semibold shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all"
             >
               Get started
               <ArrowRight className="h-3.5 w-3.5 ml-1" />
@@ -165,7 +165,7 @@ export function Navbar() {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="sm:hidden border-b border-white/10 bg-[#0A0F0D] px-4 pt-3 pb-6 space-y-3">
+          <div className="sm:hidden border-b border-white/10 bg-black px-4 pt-3 pb-6 space-y-3">
             <nav className="flex flex-col space-y-1">
               <Link
                 href="#features"
