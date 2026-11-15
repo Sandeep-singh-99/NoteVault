@@ -1,0 +1,52 @@
+# Binaries and Executables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+# Test artifacts & Coverage profiles
+*.test
+*.out
+coverage.txt
+coverage.html
+profile.out
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Live reload tools (e.g., Air) and temporary files
+tmp/
+.air/
+
+# Vendor directory (uncomment if you do not want to track vendored dependencies)
+# vendor/
+
+# Logs
+*.log
+logs/
+
+# Local uploads & storage
+uploads/
+storage/
+
+# IDEs & Code Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.fleet/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+Desktop.ini
