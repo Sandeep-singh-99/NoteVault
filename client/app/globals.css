@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0A0F0D;
-  --color-surface: #141B18;
-  --color-surface-hover: #192420;
-  --color-surface-elevated: #1B2420;
+  --color-background: #000000;
+  --color-surface: #0A0A0A;
+  --color-surface-hover: #141414;
+  --color-surface-elevated: #171717;
   --color-accent: #10B981;
   --color-accent-hover: #059669;
   --color-accent-muted: rgba(16, 185, 129, 0.15);
   --color-teal: #2DD4BF;
-  --color-text-heading: #F2F5F4;
-  --color-text-body: #8FA19A;
+  --color-text-heading: #FAFAFA;
+  --color-text-body: #A1A1AA;
   --color-border-subtle: rgba(255, 255, 255, 0.08);
   --color-border-emerald: rgba(16, 185, 129, 0.3);
 
@@ -19,30 +19,30 @@
 }
 
 :root {
-  --background: #0A0F0D;
-  --foreground: #F2F5F4;
-  --surface: #141B18;
-  --surface-hover: #192420;
+  --background: #000000;
+  --foreground: #FAFAFA;
+  --surface: #0A0A0A;
+  --surface-hover: #141414;
   --accent: #10B981;
   --accent-hover: #059669;
   --teal: #2DD4BF;
-  --text-heading: #F2F5F4;
-  --text-body: #8FA19A;
+  --text-heading: #FAFAFA;
+  --text-body: #A1A1AA;
   --border: rgba(255, 255, 255, 0.08);
   --border-subtle: rgba(255, 255, 255, 0.08);
 
-  --card: #141B18;
-  --card-foreground: #F2F5F4;
-  --popover: #141B18;
-  --popover-foreground: #F2F5F4;
+  --card: #0A0A0A;
+  --card-foreground: #FAFAFA;
+  --popover: #0A0A0A;
+  --popover-foreground: #FAFAFA;
   --primary: #10B981;
-  --primary-foreground: #0A0F0D;
-  --secondary: #192420;
-  --secondary-foreground: #F2F5F4;
-  --muted: #192420;
-  --muted-foreground: #8FA19A;
+  --primary-foreground: #000000;
+  --secondary: #121212;
+  --secondary-foreground: #FAFAFA;
+  --muted: #121212;
+  --muted-foreground: #A1A1AA;
   --destructive: #EF4444;
-  --destructive-foreground: #F2F5F4;
+  --destructive-foreground: #FAFAFA;
   --input: rgba(255, 255, 255, 0.08);
   --ring: #10B981;
   --radius: 0.875rem;
@@ -58,15 +58,15 @@ html {
 }
 
 body {
-  background-color: #0A0F0D;
-  color: #8FA19A;
+  background-color: #000000;
+  color: #A1A1AA;
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
 ::selection {
   background-color: #10B981;
-  color: #0A0F0D;
+  color: #000000;
 }
 
 /* Custom scrollbar */
@@ -75,27 +75,27 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0F0D;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #192420;
+  background: #171717;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #25332e;
+  background: #262626;
 }
 
 /* Glassmorphism helpers */
 .glass-nav {
-  background: rgba(10, 15, 13, 0.82);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card {
-  background: rgba(20, 27, 24, 0.85);
+  background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -113,12 +113,22 @@ body {
   box-shadow: 0 0 60px -10px rgba(16, 185, 129, 0.3);
 }
 
-/* Subtle grid overlay */
+/* Grid & dot texture - rgba(255,255,255,0.05) */
 .bg-grid-pattern {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.75rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
 }
 
 /* Marquee */
@@ -131,13 +141,32 @@ body {
   }
 }
 
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 35s linear infinite;
 }
 
 .animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
   animation-play-state: paused;
 }
 

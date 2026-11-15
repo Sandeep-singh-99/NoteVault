@@ -46,8 +46,8 @@ export function PlaceholdersAndVanishInput({
   return (
     <form
       className={cn(
-        "w-full relative max-w-xl mx-auto bg-[#0A0F0D] h-11 rounded-xl overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 border border-white/10 focus-within:border-[#10B981]",
-        value && "bg-[#141B18]",
+        "w-full relative max-w-xl mx-auto bg-[#000000] h-11 rounded-xl overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 border border-white/10 focus-within:border-[#10B981]",
+        value && "bg-[#0A0A0A]",
         className
       )}
       onSubmit={handleSubmit}
@@ -66,7 +66,7 @@ export function PlaceholdersAndVanishInput({
         value={value}
         type="text"
         className={cn(
-          "w-full text-xs sm:text-sm font-mono z-20 border-none bg-transparent text-[#F2F5F4] focus:outline-none focus:ring-0 pl-9 pr-10 h-full",
+          "w-full text-xs sm:text-sm font-mono z-20 border-none bg-transparent text-[#FAFAFA] focus:outline-none focus:ring-0 pl-9 pr-10 h-full",
           animating && "text-transparent"
         )}
       />
@@ -76,7 +76,7 @@ export function PlaceholdersAndVanishInput({
         type="submit"
         className="absolute right-2 top-1/2 -translate-y-1/2 h-7 w-7 rounded-lg bg-[#10B981] disabled:bg-white/5 transition duration-200 flex items-center justify-center disabled:opacity-30 cursor-pointer"
       >
-        <ArrowRight className="h-3.5 w-3.5 text-[#0A0F0D]" />
+        <ArrowRight className="h-3.5 w-3.5 text-[#000000]" />
       </button>
 
       <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
@@ -100,7 +100,7 @@ export function PlaceholdersAndVanishInput({
                 duration: 0.3,
                 ease: "linear",
               }}
-              className="text-[#8FA19A] text-xs font-mono truncate pointer-events-none pl-9"
+              className="text-[#A1A1AA] text-xs font-mono truncate pointer-events-none pl-9"
             >
               {placeholders[currentPlaceholder]}
             </motion.p>

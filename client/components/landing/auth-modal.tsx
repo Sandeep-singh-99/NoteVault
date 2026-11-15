@@ -35,15 +35,15 @@ export function AuthModal({ open, onOpenChange }: AuthModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-md bg-[#141B18] border border-white/10 p-6 sm:p-8">
+      <DialogContent className="max-w-md bg-[#0A0A0A] border border-white/10 p-6 sm:p-8">
         <DialogHeader className="text-center sm:text-center items-center">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#10B981]/15 border border-[#10B981]/30 text-[#10B981] mb-3 shadow-[0_0_20px_rgba(16,185,129,0.25)]">
             <Sparkles className="h-6 w-6" />
           </div>
-          <DialogTitle className="text-2xl font-bold text-[#F2F5F4]">
+          <DialogTitle className="text-2xl font-bold text-[#FAFAFA]">
             Welcome to NoteVault
           </DialogTitle>
-          <DialogDescription className="text-sm text-[#8FA19A]">
+          <DialogDescription className="text-sm text-[#A1A1AA]">
             Sign in to sync your blocks, MDX templates, and notes across all devices.
           </DialogDescription>
         </DialogHeader>
@@ -53,10 +53,10 @@ export function AuthModal({ open, onOpenChange }: AuthModalProps) {
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#10B981]/20 text-[#10B981]">
               <ShieldCheck className="h-6 w-6" />
             </div>
-            <div className="text-lg font-semibold text-[#F2F5F4]">
+            <div className="text-lg font-semibold text-[#FAFAFA]">
               Magic link sent!
             </div>
-            <p className="text-xs text-[#8FA19A]">
+            <p className="text-xs text-[#A1A1AA]">
               Check your inbox at <span className="text-[#10B981] font-mono">{email}</span> to sign in.
             </p>
           </div>
@@ -107,7 +107,7 @@ export function AuthModal({ open, onOpenChange }: AuthModalProps) {
                   }, 1200);
                 }}
               >
-                <GithubIcon className="h-4 w-4 text-[#F2F5F4]" />
+                <GithubIcon className="h-4 w-4 text-[#FAFAFA]" />
                 GitHub
               </Button>
             </div>
@@ -116,7 +116,7 @@ export function AuthModal({ open, onOpenChange }: AuthModalProps) {
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-white/10" />
               </div>
-              <span className="relative bg-[#141B18] px-3 text-[11px] uppercase tracking-wider text-[#8FA19A]">
+              <span className="relative bg-[#0A0A0A] px-3 text-[11px] uppercase tracking-wider text-[#A1A1AA]">
                 or continue with email
               </span>
             </div>
@@ -128,19 +128,19 @@ export function AuthModal({ open, onOpenChange }: AuthModalProps) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="h-11 bg-[#0A0F0D] border-white/10 text-sm"
+                className="h-11 bg-[#000000] border-white/10 text-sm"
               />
               <Button
                 type="submit"
                 variant="default"
-                className="w-full h-11 font-semibold text-[#0A0F0D] bg-[#10B981] hover:bg-[#059669] shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+                className="w-full h-11 font-semibold text-[#000000] bg-[#10B981] hover:bg-[#059669] shadow-[0_0_20px_rgba(16,185,129,0.3)]"
               >
                 Continue with Magic Link
                 <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             </form>
 
-            <p className="text-center text-[11px] text-[#8FA19A]/80 pt-2">
+            <p className="text-center text-[11px] text-[#A1A1AA]/80 pt-2">
               By clicking continue, you agree to our{" "}
               <a href="#" className="text-[#10B981] hover:underline">
                 Terms of Service

@@ -67,15 +67,15 @@ export const StickyScroll = ({
                   </div>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#F2F5F4] tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#FAFAFA] tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-base text-[#8FA19A] leading-relaxed max-w-lg">
+                <p className="text-base text-[#A1A1AA] leading-relaxed max-w-lg">
                   {item.description}
                 </p>
 
                 {/* Mobile visual display */}
-                <div className="block lg:hidden mt-6 rounded-2xl border border-white/10 bg-[#141B18] p-4 overflow-hidden shadow-xl">
+                <div className="block lg:hidden mt-6 rounded-2xl border border-white/10 bg-[#0A0A0A] p-4 overflow-hidden shadow-xl">
                   {item.content}
                 </div>
               </motion.div>
@@ -88,7 +88,7 @@ export const StickyScroll = ({
       {/* Desktop Sticky Graphic Panel */}
       <div
         className={cn(
-          "hidden lg:block h-[420px] w-[500px] rounded-2xl border border-white/10 bg-[#141B18] sticky top-28 overflow-hidden shadow-2xl backdrop-blur-md",
+          "hidden lg:block h-[420px] w-[500px] rounded-2xl border border-white/10 bg-[#0A0A0A] sticky top-28 overflow-hidden shadow-2xl backdrop-blur-md",
           contentClassName
         )}
       >

@@ -102,7 +102,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="w-[380px] max-w-full relative rounded-2xl border border-white/10 bg-[#141B18] px-6 py-6 md:w-[420px] shrink-0 hover:border-[#10B981]/40 transition-colors shadow-xl"
+            className="w-[380px] max-w-full relative rounded-2xl border border-white/10 bg-[#0A0A0A] px-6 py-6 md:w-[420px] shrink-0 hover:border-[#10B981]/40 transition-colors shadow-xl"
           >
             <div className="flex items-center gap-1 text-[#10B981] mb-4">
               {[...Array(5)].map((_, i) => (
@@ -110,21 +110,21 @@ export const InfiniteMovingCards = ({
               ))}
             </div>
             <blockquote>
-              <p className="text-sm leading-relaxed text-[#F2F5F4] font-normal mb-6">
+              <p className="text-sm leading-relaxed text-[#FAFAFA] font-normal mb-6">
                 &ldquo;{item.quote}&rdquo;
               </p>
               <div className="flex items-center gap-3 pt-3 border-t border-white/10">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-[#10B981] to-[#2DD4BF] flex items-center justify-center text-[#0A0F0D] font-bold text-sm shrink-0 shadow-md">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-[#10B981] to-[#2DD4BF] flex items-center justify-center text-[#000000] font-bold text-sm shrink-0 shadow-md">
                   {item.name.charAt(0)}
                 </div>
                 <div className="flex flex-col overflow-hidden">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm font-semibold text-[#F2F5F4]">
+                    <span className="text-sm font-semibold text-[#FAFAFA]">
                       {item.name}
                     </span>
                     <CheckCircle className="h-3.5 w-3.5 text-[#10B981]" />
                   </div>
-                  <span className="text-xs text-[#8FA19A] truncate">
+                  <span className="text-xs text-[#A1A1AA] truncate">
                     {item.title}
                   </span>
                 </div>
@@ -133,13 +133,6 @@ export const InfiniteMovingCards = ({
           </li>
         ))}
       </ul>
-      <style jsx>{`
-        @keyframes scroll {
-          to {
-            transform: translate(calc(-50% - 0.75rem));
-          }
-        }
-      `}</style>
     </div>
   );
 };

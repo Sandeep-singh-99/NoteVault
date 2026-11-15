@@ -12,9 +12,9 @@ const badgeVariants = cva(
         teal:
           "border-[#2DD4BF]/30 bg-[#2DD4BF]/10 text-[#2DD4BF] shadow-sm",
         secondary:
-          "border-white/10 bg-[#141B18] text-[#8FA19A]",
+          "border-white/[0.08] bg-[#0A0A0A] text-[#A1A1AA]",
         outline:
-          "border-white/15 text-[#F2F5F4]",
+          "border-white/15 text-[#FAFAFA]",
         emeraldGlow:
           "border-[#10B981]/40 bg-[#10B981]/15 text-[#10B981] shadow-[0_0_15px_rgba(16,185,129,0.25)]",
       },

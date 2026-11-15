@@ -9,17 +9,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-[#10B981] text-black font-semibold hover:bg-[#059669] shadow-lg shadow-[#10B981]/20 active:scale-[0.98]",
+          "bg-[#10B981] text-[#000000] font-semibold hover:bg-[#059669] shadow-lg shadow-[#10B981]/25 active:scale-[0.98]",
         secondary:
-          "bg-[#141B18] text-[#F2F5F4] border border-white/10 hover:bg-[#192420] hover:border-[#10B981]/40 active:scale-[0.98]",
+          "bg-[#0A0A0A] text-[#FAFAFA] border border-white/[0.08] hover:bg-[#141414] hover:border-[#10B981]/40 active:scale-[0.98]",
         outline:
-          "border border-white/10 bg-transparent text-[#F2F5F4] hover:bg-[#141B18] hover:text-[#10B981] hover:border-[#10B981]/50 active:scale-[0.98]",
+          "border border-white/[0.08] bg-transparent text-[#FAFAFA] hover:bg-[#0A0A0A] hover:text-[#10B981] hover:border-[#10B981]/50 active:scale-[0.98]",
         ghost:
-          "text-[#8FA19A] hover:text-[#F2F5F4] hover:bg-white/5 active:scale-[0.98]",
+          "text-[#A1A1AA] hover:text-[#FAFAFA] hover:bg-white/5 active:scale-[0.98]",
         link:
           "text-[#10B981] underline-offset-4 hover:underline p-0 h-auto",
         glow:
-          "bg-gradient-to-r from-[#10B981] to-[#2DD4BF] text-black font-semibold hover:opacity-95 shadow-[0_0_25px_rgba(16,185,129,0.35)] active:scale-[0.98]",
+          "bg-gradient-to-r from-[#10B981] to-[#2DD4BF] text-[#000000] font-bold hover:opacity-95 shadow-[0_0_25px_rgba(16,185,129,0.35)] active:scale-[0.98]",
       },
       size: {
         default: "h-10 px-4 py-2",

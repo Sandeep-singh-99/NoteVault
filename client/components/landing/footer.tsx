@@ -55,7 +55,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-[#0A0F0D] pt-16 pb-12 text-[#8FA19A] relative overflow-hidden">
+    <footer className="border-t border-white/10 bg-[#000000] pt-16 pb-12 text-[#A1A1AA] relative overflow-hidden">
       {/* Subtle background grid pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-25 pointer-events-none" />
 
@@ -64,23 +64,23 @@ export function Footer() {
           {/* Brand info column */}
           <div className="col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-[#0A0F0D] font-black text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#2DD4BF] text-[#000000] font-black text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)]">
                 N
               </div>
-              <span className="text-base font-bold tracking-tight text-[#F2F5F4]">
+              <span className="text-base font-bold tracking-tight text-[#FAFAFA]">
                 NoteVault
               </span>
             </Link>
 
-            <p className="text-xs sm:text-sm text-[#8FA19A] max-w-sm leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#A1A1AA] max-w-sm leading-relaxed">
               The Notion-style block editor built for modern technical thinkers. Rich blocks, full MDX support, and sub-millisecond local-first sync.
             </p>
 
             {/* System Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-[#141B18] text-[11px] font-mono">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-[#0A0A0A] text-[11px] font-mono">
               <span className="h-2 w-2 rounded-full bg-[#10B981] animate-pulse" />
-              <span className="text-[#F2F5F4]">All systems operational</span>
-              <span className="text-[#8FA19A]">•</span>
+              <span className="text-[#FAFAFA]">All systems operational</span>
+              <span className="text-[#A1A1AA]">•</span>
               <span className="text-[#10B981]">99.99%</span>
             </div>
 
@@ -90,7 +90,7 @@ export function Footer() {
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
-                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#8FA19A] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
+                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#A1A1AA] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
                 aria-label="GitHub"
               >
                 <GithubIcon className="h-4 w-4" />
@@ -99,7 +99,7 @@ export function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noreferrer"
-                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#8FA19A] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
+                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#A1A1AA] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
                 aria-label="Twitter"
               >
                 <TwitterIcon className="h-4 w-4" />
@@ -108,7 +108,7 @@ export function Footer() {
                 href="https://discord.com"
                 target="_blank"
                 rel="noreferrer"
-                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#8FA19A] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
+                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#A1A1AA] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
                 aria-label="Discord"
               >
                 <MessageSquare className="h-4 w-4" />
@@ -117,7 +117,7 @@ export function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#8FA19A] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
+                className="h-8 w-8 rounded-lg border border-white/10 flex items-center justify-center text-[#A1A1AA] hover:text-[#10B981] hover:border-[#10B981]/40 transition-colors"
                 aria-label="YouTube"
               >
                 <YoutubeIcon className="h-4 w-4" />
@@ -128,7 +128,7 @@ export function Footer() {
           {/* Nav columns */}
           {columns.map((col, idx) => (
             <div key={idx} className="space-y-3">
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#F2F5F4] font-mono">
+              <div className="text-xs font-semibold uppercase tracking-wider text-[#FAFAFA] font-mono">
                 {col.title}
               </div>
               <ul className="space-y-2 text-xs">
@@ -162,7 +162,7 @@ export function Footer() {
           <div suppressHydrationWarning>
             &copy; 2026 NoteVault Inc. All rights reserved.
           </div>
-          <div className="flex items-center gap-1 text-[#8FA19A]">
+          <div className="flex items-center gap-1 text-[#A1A1AA]">
             <span>Crafted with precision for</span>
             <span className="text-[#10B981] font-semibold">Tiptap & MDX</span>
             <span>enthusiasts.</span>

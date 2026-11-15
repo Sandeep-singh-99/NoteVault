@@ -39,9 +39,9 @@ export function SocialProof() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 border-y border-white/5 bg-[#0E1512]/50 relative overflow-hidden">
+    <section className="py-16 sm:py-20 border-y border-white/5 bg-[#0A0A0A]/40 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-xs font-mono uppercase tracking-widest text-[#8FA19A]">
+        <p className="text-center text-xs font-mono uppercase tracking-widest text-[#A1A1AA]">
           POWERING HIGH-VELOCITY ENGINEERING TEAMS WORLDWIDE
         </p>
 
@@ -51,10 +51,10 @@ export function SocialProof() {
             {[...logos, ...logos].map((logo, idx) => (
               <div
                 key={idx}
-                className="group flex items-center gap-3 px-5 py-2.5 rounded-xl border border-white/10 bg-[#141B18]/70 text-xs font-mono text-[#8FA19A] hover:text-[#F2F5F4] hover:border-[#10B981]/40 transition-all shrink-0 select-none cursor-pointer"
+                className="group flex items-center gap-3 px-5 py-2.5 rounded-xl border border-white/10 bg-[#0A0A0A]/90 text-xs font-mono text-[#A1A1AA] hover:text-[#FAFAFA] hover:border-[#10B981]/40 transition-all shrink-0 select-none cursor-pointer"
               >
                 <div className="h-2 w-2 rounded-full bg-[#10B981] group-hover:scale-125 transition-transform" />
-                <span className="font-bold text-[#F2F5F4] tracking-wider">
+                <span className="font-bold text-[#FAFAFA] tracking-wider">
                   {logo.label}
                 </span>
                 <span className="text-white/20">•</span>
@@ -73,19 +73,19 @@ export function SocialProof() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-white/5 bg-[#141B18]/70 p-5 flex flex-col justify-between hover:border-[#10B981]/30 hover:-translate-y-1 transition-all"
+                className="rounded-2xl border border-white/5 bg-[#0A0A0A] p-5 flex flex-col justify-between hover:border-[#10B981]/30 hover:-translate-y-1 transition-all"
               >
-                <div className="flex items-center justify-between text-[#8FA19A] mb-2">
+                <div className="flex items-center justify-between text-[#A1A1AA] mb-2">
                   <span className="text-xs uppercase tracking-wider font-mono">
                     Stat 0{idx + 1}
                   </span>
                   <Icon className="h-4 w-4 text-[#10B981]" />
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#F2F5F4] tracking-tight font-mono">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#FAFAFA] tracking-tight font-mono">
                     {stat.value}
                   </div>
-                  <div className="text-xs text-[#8FA19A] mt-1">{stat.label}</div>
+                  <div className="text-xs text-[#A1A1AA] mt-1">{stat.label}</div>
                 </div>
               </div>
             );

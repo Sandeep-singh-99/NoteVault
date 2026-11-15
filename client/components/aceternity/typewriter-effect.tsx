@@ -21,7 +21,7 @@ export const TypewriterEffectSmooth = ({
 }) => {
   return (
     <div className={cn("w-full max-w-5xl mx-auto my-4 px-4 text-center", className)}>
-      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#F2F5F4] leading-[1.18] sm:leading-[1.15] text-balance">
+      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#FAFAFA] leading-[1.18] sm:leading-[1.15] text-balance">
         {words.map((word, idx) => (
           <React.Fragment key={`word-${idx}`}>
             <motion.span
@@ -78,7 +78,7 @@ export const TextGenerateEffect = ({
               duration: 0.4,
               delay: idx * 0.1,
             }}
-            className="inline-block mr-2 text-[#F2F5F4]"
+            className="inline-block mr-2 text-[#FAFAFA]"
           >
             {word}
           </motion.span>

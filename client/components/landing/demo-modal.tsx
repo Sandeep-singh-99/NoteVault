@@ -23,29 +23,29 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-3xl bg-[#141B18] border border-white/10 p-6 overflow-hidden">
+      <DialogContent className="max-w-3xl bg-[#0A0A0A] border border-white/10 p-6 overflow-hidden">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-1">
             <Badge variant="emeraldGlow">Interactive Live Demo</Badge>
-            <span className="text-xs text-[#8FA19A]">Tiptap 2.x + React 19 MDX</span>
+            <span className="text-xs text-[#A1A1AA]">Tiptap 2.x + React 19 MDX</span>
           </div>
-          <DialogTitle className="text-xl sm:text-2xl font-bold text-[#F2F5F4]">
+          <DialogTitle className="text-xl sm:text-2xl font-bold text-[#FAFAFA]">
             Experience NoteVault Block & MDX Editor
           </DialogTitle>
-          <DialogDescription className="text-xs sm:text-sm text-[#8FA19A]">
+          <DialogDescription className="text-xs sm:text-sm text-[#A1A1AA]">
             Try writing, toggling embedded React components, and switching between the block tree and live renderer.
           </DialogDescription>
         </DialogHeader>
 
         {/* Demo Window Chrome */}
-        <div className="mt-4 rounded-xl border border-white/10 bg-[#0A0F0D] overflow-hidden">
+        <div className="mt-4 rounded-xl border border-white/10 bg-[#000000] overflow-hidden">
           {/* Top Bar */}
-          <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/10 bg-[#141B18]/60">
+          <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/10 bg-[#0A0A0A]/60">
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-[#EF4444]/80" />
               <div className="h-3 w-3 rounded-full bg-[#F59E0B]/80" />
               <div className="h-3 w-3 rounded-full bg-[#10B981]/80" />
-              <span className="ml-2 font-mono text-xs text-[#8FA19A]">
+              <span className="ml-2 font-mono text-xs text-[#A1A1AA]">
                 demo-playground.mdx
               </span>
             </div>
@@ -55,8 +55,8 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
                 onClick={() => setActiveTab("preview")}
                 className={`px-2.5 py-1 text-xs rounded-md font-medium transition-colors ${
                   activeTab === "preview"
-                    ? "bg-[#10B981] text-[#0A0F0D]"
-                    : "text-[#8FA19A] hover:text-[#F2F5F4]"
+                    ? "bg-[#10B981] text-[#000000]"
+                    : "text-[#A1A1AA] hover:text-[#FAFAFA]"
                 }`}
               >
                 Live Preview
@@ -65,8 +65,8 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
                 onClick={() => setActiveTab("block")}
                 className={`px-2.5 py-1 text-xs rounded-md font-medium transition-colors ${
                   activeTab === "block"
-                    ? "bg-[#10B981] text-[#0A0F0D]"
-                    : "text-[#8FA19A] hover:text-[#F2F5F4]"
+                    ? "bg-[#10B981] text-[#000000]"
+                    : "text-[#A1A1AA] hover:text-[#FAFAFA]"
                 }`}
               >
                 Block Tree
@@ -75,8 +75,8 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
                 onClick={() => setActiveTab("mdx")}
                 className={`px-2.5 py-1 text-xs rounded-md font-medium transition-colors ${
                   activeTab === "mdx"
-                    ? "bg-[#10B981] text-[#0A0F0D]"
-                    : "text-[#8FA19A] hover:text-[#F2F5F4]"
+                    ? "bg-[#10B981] text-[#000000]"
+                    : "text-[#A1A1AA] hover:text-[#FAFAFA]"
                 }`}
               >
                 Raw MDX
@@ -90,21 +90,21 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
               <div className="space-y-4">
                 <div className="flex items-center gap-2 text-xs font-mono text-[#10B981]">
                   <span># SECTION 01</span>
-                  <span className="text-[#8FA19A]">•</span>
+                  <span className="text-[#A1A1AA]">•</span>
                   <span className="text-[#2DD4BF]">Interactive Node</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#F2F5F4]">
+                <h3 className="text-xl font-bold text-[#FAFAFA]">
                   Production Revenue Telemetry
                 </h3>
-                <p className="text-sm text-[#8FA19A] leading-relaxed">
+                <p className="text-sm text-[#A1A1AA] leading-relaxed">
                   The block below is a live React component embedded directly inside the Tiptap document.
                   Click the button inside to test state persistence!
                 </p>
 
                 {/* Embedded Live React Component */}
-                <div className="rounded-xl border border-[#10B981]/30 bg-[#141B18] p-4 shadow-lg shadow-[#10B981]/5">
+                <div className="rounded-xl border border-[#10B981]/30 bg-[#0A0A0A] p-4 shadow-lg shadow-[#10B981]/5">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs uppercase font-mono tracking-wider text-[#8FA19A]">
+                    <span className="text-xs uppercase font-mono tracking-wider text-[#A1A1AA]">
                       Live MDX Widget: &lt;RevenueMetrics /&gt;
                     </span>
                     <Badge variant="teal">Connected to Supabase</Badge>
@@ -113,7 +113,7 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
                     <div>
                       <div
                         suppressHydrationWarning
-                        className="text-2xl font-bold font-mono text-[#F2F5F4]"
+                        className="text-2xl font-bold font-mono text-[#FAFAFA]"
                       >
                         ${metricValue.toLocaleString("en-US")}
                       </div>
@@ -134,11 +134,11 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
                 </div>
 
                 <div className="space-y-2 pt-2">
-                  <div className="flex items-center gap-2 text-sm text-[#F2F5F4]">
+                  <div className="flex items-center gap-2 text-sm text-[#FAFAFA]">
                     <CheckCircle2 className="h-4 w-4 text-[#10B981]" />
                     <span>Hydrated client-side with zero layout shift</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-[#F2F5F4]">
+                  <div className="flex items-center gap-2 text-sm text-[#FAFAFA]">
                     <CheckCircle2 className="h-4 w-4 text-[#10B981]" />
                     <span>Syncs with offline indexedDB storage</span>
                   </div>
@@ -148,22 +148,22 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
 
             {activeTab === "block" && (
               <div className="space-y-3 font-mono text-xs">
-                <div className="p-3 rounded-lg bg-[#141B18] border border-white/5 text-[#8FA19A]">
+                <div className="p-3 rounded-lg bg-[#0A0A0A] border border-white/5 text-[#A1A1AA]">
                   <span className="text-[#10B981] font-bold">Node 1: HeadingBlock</span> (level: 2)
-                  <p className="text-[#F2F5F4] mt-1">&ldquo;Production Revenue Telemetry&rdquo;</p>
+                  <p className="text-[#FAFAFA] mt-1">&ldquo;Production Revenue Telemetry&rdquo;</p>
                 </div>
-                <div className="p-3 rounded-lg bg-[#141B18] border border-[#10B981]/30 text-[#8FA19A]">
+                <div className="p-3 rounded-lg bg-[#0A0A0A] border border-[#10B981]/30 text-[#A1A1AA]">
                   <span className="text-[#2DD4BF] font-bold">Node 2: MdxComponentBlock</span> (component: &quot;RevenueMetrics&quot;)
-                  <p className="text-[#8FA19A] mt-1">props: &#123; endpoint: &quot;/api/v1/telemetry&quot;, live: true &#125;</p>
+                  <p className="text-[#A1A1AA] mt-1">props: &#123; endpoint: &quot;/api/v1/telemetry&quot;, live: true &#125;</p>
                 </div>
-                <div className="p-3 rounded-lg bg-[#141B18] border border-white/5 text-[#8FA19A]">
+                <div className="p-3 rounded-lg bg-[#0A0A0A] border border-white/5 text-[#A1A1AA]">
                   <span className="text-[#10B981] font-bold">Node 3: ChecklistBlock</span> (items: 2, checked: 2)
                 </div>
               </div>
             )}
 
             {activeTab === "mdx" && (
-              <pre className="font-mono text-xs text-[#8FA19A] bg-[#141B18] p-4 rounded-xl border border-white/5 overflow-x-auto leading-relaxed">
+              <pre className="font-mono text-xs text-[#A1A1AA] bg-[#0A0A0A] p-4 rounded-xl border border-white/5 overflow-x-auto leading-relaxed">
                 <span className="text-[#10B981]">---</span>{"\n"}
                 <span className="text-[#2DD4BF]">title</span>: Production Revenue Telemetry{"\n"}
                 <span className="text-[#2DD4BF]">author</span>: engineering-lead{"\n"}
@@ -172,9 +172,9 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
                 The block below is a live React component embedded inside the document:{"\n\n"}
                 <span className="text-[#10B981]">&lt;</span>
                 <span className="text-[#2DD4BF]">RevenueMetrics</span>{" "}
-                <span className="text-[#F2F5F4]">endpoint</span>=
+                <span className="text-[#FAFAFA]">endpoint</span>=
                 <span className="text-[#10B981]">&quot;/api/v1/telemetry&quot;</span>{" "}
-                <span className="text-[#F2F5F4]">live</span>=
+                <span className="text-[#FAFAFA]">live</span>=
                 <span className="text-[#10B981]">&#123;true&#125;</span>
                 <span className="text-[#10B981]">&gt;</span>{"\n"}
                 {"  "}&lt;TelemetryGraph range=&quot;30d&quot; /&gt;{"\n"}
@@ -189,12 +189,12 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
         </div>
 
         <div className="flex items-center justify-between pt-2">
-          <span className="text-xs text-[#8FA19A]">
+          <span className="text-xs text-[#A1A1AA]">
             Runs locally in browser • No telemetry leaks
           </span>
           <Button
             onClick={() => onOpenChange(false)}
-            className="bg-[#10B981] text-[#0A0F0D] hover:bg-[#059669] font-semibold text-xs"
+            className="bg-[#10B981] text-[#000000] hover:bg-[#059669] font-semibold text-xs"
           >
             Close Playground
           </Button>

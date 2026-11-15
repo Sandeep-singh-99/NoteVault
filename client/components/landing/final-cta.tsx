@@ -37,26 +37,26 @@ export function FinalCTA() {
               <span>Free 14-Day Pro Trial Included</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-[#F2F5F4] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-[#FAFAFA] leading-tight">
               Ready to elevate your notes into{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] via-[#2DD4BF] to-[#10B981]">
                 living documents?
               </span>
             </h2>
 
-            <p className="text-sm sm:text-base md:text-lg text-[#8FA19A] max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-[#A1A1AA] max-w-xl mx-auto leading-relaxed">
               Join over 35,000 developers, writers, and product architects organizing knowledge with Tiptap blocks and MDX components.
             </p>
 
             {submitted ? (
-              <div className="mt-8 p-6 rounded-2xl bg-[#141B18]/90 border border-[#10B981] max-w-md mx-auto text-center space-y-2 shadow-2xl">
+              <div className="mt-8 p-6 rounded-2xl bg-[#0A0A0A]/90 border border-[#10B981] max-w-md mx-auto text-center space-y-2 shadow-2xl">
                 <div className="flex items-center justify-center gap-2 text-[#10B981] font-bold">
                   <ShieldCheck className="h-5 w-5" />
                   <span>Welcome aboard!</span>
                 </div>
-                <p className="text-xs text-[#8FA19A]">
+                <p className="text-xs text-[#A1A1AA]">
                   We sent your workspace setup link to{" "}
-                  <span className="text-[#F2F5F4] font-mono">{email}</span>.
+                  <span className="text-[#FAFAFA] font-mono">{email}</span>.
                 </p>
               </div>
             ) : (
@@ -70,14 +70,14 @@ export function FinalCTA() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="h-12 bg-[#0A0F0D]/90 border-white/20 text-[#F2F5F4] placeholder:text-[#8FA19A] focus-visible:ring-[#10B981] text-sm rounded-xl"
+                  className="h-12 bg-[#000000]/90 border-white/20 text-[#FAFAFA] placeholder:text-[#A1A1AA] focus-visible:ring-[#10B981] text-sm rounded-xl"
                 />
                 <MovingBorderButton
                   duration={3000}
                   borderRadius="0.75rem"
                   as="button"
                   containerClassName="h-12 w-full sm:w-auto"
-                  className="bg-[#10B981] text-[#0A0F0D] font-bold text-xs sm:text-sm px-6 hover:bg-[#059669] shrink-0"
+                  className="bg-[#10B981] text-[#000000] font-bold text-xs sm:text-sm px-6 hover:bg-[#059669] shrink-0"
                 >
                   <span className="flex items-center gap-1.5">
                     Get started
@@ -87,7 +87,7 @@ export function FinalCTA() {
               </form>
             )}
 
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-[#8FA19A]">
+            <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-[#A1A1AA]">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-3.5 w-3.5 text-[#10B981]" />
                 No credit card required

@@ -16,10 +16,10 @@ export function ProductPreview() {
               <Sparkles className="h-3 w-3 mr-1" />
               Interactive Editor Canvas
             </Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#F2F5F4] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#FAFAFA] tracking-tight">
               A block editor that doesn’t treat code like plain text
             </h2>
-            <p className="text-sm sm:text-base text-[#8FA19A] max-w-xl mx-auto">
+            <p className="text-sm sm:text-base text-[#A1A1AA] max-w-xl mx-auto">
               Scroll down to watch the live workspace tilt into focus. Every node is reactive, draggable, and exportable.
             </p>
           </div>

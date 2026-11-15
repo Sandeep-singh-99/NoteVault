@@ -41,7 +41,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#10B981]/30 bg-[#10B981]/10 text-xs text-[#10B981] font-medium mb-6 shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:border-[#10B981]/60 transition-all cursor-pointer">
               <span className="flex h-2 w-2 rounded-full bg-[#10B981] animate-ping" />
               <span className="font-semibold">NoteVault 2.0 with MDX block engine is live</span>
-              <span className="text-[#8FA19A]">•</span>
+              <span className="text-[#A1A1AA]">•</span>
               <span className="text-[#2DD4BF] flex items-center gap-1 font-mono">
                 Read release <ArrowRight className="h-3 w-3" />
               </span>
@@ -49,7 +49,7 @@ export function Hero() {
 
             {/* Headline with Flip Words and Hero Highlight */}
             <div className="my-2">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#F2F5F4] leading-[1.18] sm:leading-[1.14] text-balance">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#FAFAFA] leading-[1.18] sm:leading-[1.14] text-balance">
                 <span>Where thoughts become</span>{" "}
                 <FlipWords
                   words={flipWordsList}
@@ -57,7 +57,7 @@ export function Hero() {
                 />
                 <br />
                 <HeroHighlight containerClassName="inline-block my-1">
-                  <Highlight className="text-[#0A0F0D] bg-gradient-to-r from-[#10B981] to-[#2DD4BF]">
+                  <Highlight className="text-[#000000] bg-gradient-to-r from-[#10B981] to-[#2DD4BF]">
                     Powered by MDX.
                   </Highlight>
                 </HeroHighlight>
@@ -65,7 +65,7 @@ export function Hero() {
             </div>
 
             {/* One-line subtext */}
-            <p className="mt-6 text-base sm:text-lg md:text-xl text-[#8FA19A] max-w-2xl leading-relaxed">
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-[#A1A1AA] max-w-2xl leading-relaxed">
               The Notion-style workspace that treats markdown like code and blocks like React components. Fast, flexible, and local-first.
             </p>
 
@@ -76,7 +76,7 @@ export function Hero() {
                 borderRadius="1rem"
                 onClick={() => setAuthOpen(true)}
                 containerClassName="h-13 w-full sm:w-auto"
-                className="bg-[#10B981] text-[#0A0F0D] font-bold text-base px-8 h-full hover:bg-[#059669] shadow-[0_0_25px_rgba(16,185,129,0.35)]"
+                className="bg-[#10B981] text-[#000000] font-bold text-base px-8 h-full hover:bg-[#059669] shadow-[0_0_25px_rgba(16,185,129,0.35)]"
               >
                 <span>Start writing free</span>
                 <ArrowRight className="h-4 w-4 ml-2" />
@@ -84,7 +84,7 @@ export function Hero() {
 
               <button
                 onClick={() => setDemoOpen(true)}
-                className="w-full sm:w-auto h-13 px-6 rounded-2xl border border-white/10 bg-[#141B18]/90 text-[#F2F5F4] hover:text-[#10B981] hover:border-[#10B981]/40 font-semibold text-base flex items-center justify-center transition-all cursor-pointer backdrop-blur-md"
+                className="w-full sm:w-auto h-13 px-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/90 text-[#FAFAFA] hover:text-[#10B981] hover:border-[#10B981]/40 font-semibold text-base flex items-center justify-center transition-all cursor-pointer backdrop-blur-md"
               >
                 <Play className="h-4 w-4 mr-2 fill-[#10B981] text-[#10B981]" />
                 <span>See interactive demo</span>
@@ -92,7 +92,7 @@ export function Hero() {
             </div>
 
             {/* Reassurance Metrics */}
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-6 text-xs text-[#8FA19A]">
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-6 text-xs text-[#A1A1AA]">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-[#10B981]" />
                 <span>No credit card required</span>

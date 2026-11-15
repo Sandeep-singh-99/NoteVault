@@ -49,10 +49,10 @@ export function Testimonials() {
         <Badge variant="emeraldGlow" className="mb-4">
           Community Feedback
         </Badge>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F2F5F4] tracking-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#FAFAFA] tracking-tight">
           Loved by engineers who write docs like code
         </h2>
-        <p className="mt-4 text-base sm:text-lg text-[#8FA19A] max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-4 text-base sm:text-lg text-[#A1A1AA] max-w-2xl mx-auto leading-relaxed">
           Here is how modern engineering organizations use NoteVault to supercharge technical documentation.
         </p>
       </div>

@@ -67,7 +67,7 @@ export const AuroraBackground = ({
   return (
     <div className={cn("relative overflow-hidden", className)}>
       <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-gradient-to-tr from-[#10B981]/25 via-[#2DD4BF]/20 to-transparent blur-[120px] rounded-full animate-pulse-subtle" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-gradient-to-tr from-[#10B981]/20 via-[#2DD4BF]/15 to-transparent blur-[120px] rounded-full animate-pulse-subtle" />
         <div className="absolute top-1/4 -right-20 w-[400px] h-[300px] bg-[#10B981]/15 blur-[100px] rounded-full" />
         <div className="absolute top-1/3 -left-20 w-[450px] h-[300px] bg-[#2DD4BF]/10 blur-[110px] rounded-full" />
       </div>

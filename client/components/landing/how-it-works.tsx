@@ -14,21 +14,21 @@ export function HowItWorks() {
         "Initialize your vault in seconds. Choose from engineering RFCs, sprint planning, system design specs, or start with a pristine blank canvas. All folders and notes sync locally with instant offline availability.",
       icon: <FolderPlus className="h-5 w-5" />,
       content: (
-        <div className="w-full h-full flex flex-col justify-between rounded-xl bg-[#0A0F0D] border border-white/10 p-5 font-mono text-xs text-[#8FA19A]">
+        <div className="w-full h-full flex flex-col justify-between rounded-xl bg-[#000000] border border-white/10 p-5 font-mono text-xs text-[#A1A1AA]">
           <div className="space-y-3">
             <div className="flex items-center justify-between border-b border-white/5 pb-2">
               <span className="text-[#10B981] font-bold">New Vault Setup</span>
               <span className="text-[10px] text-[#2DD4BF]">Local-First</span>
             </div>
             <div className="space-y-2">
-              <div className="p-2.5 rounded-lg bg-[#141B18] border border-[#10B981]/30 text-[#F2F5F4] flex items-center justify-between">
+              <div className="p-2.5 rounded-lg bg-[#0A0A0A] border border-[#10B981]/30 text-[#FAFAFA] flex items-center justify-between">
                 <span>📁 ~/engineering/core-specs</span>
                 <span className="text-[#10B981] text-[10px]">INITIALIZED</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-[#141B18]/40 border border-white/5 text-[#8FA19A]">
+              <div className="p-2.5 rounded-lg bg-[#0A0A0A]/40 border border-white/5 text-[#A1A1AA]">
                 <span>📄 architecture-rfc.mdx</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-[#141B18]/40 border border-white/5 text-[#8FA19A]">
+              <div className="p-2.5 rounded-lg bg-[#0A0A0A]/40 border border-white/5 text-[#A1A1AA]">
                 <span>📄 sprint-24-metrics.mdx</span>
               </div>
             </div>
@@ -47,7 +47,7 @@ export function HowItWorks() {
         "Type naturally using standard markdown syntax, or trigger the '/' command to drop rich block nodes. Embed live React buttons, tables, metric counters, and code blocks with syntax highlighting.",
       icon: <PenTool className="h-5 w-5" />,
       content: (
-        <div className="w-full h-full flex flex-col justify-between rounded-xl bg-[#0A0F0D] border border-white/10 p-5 font-mono text-xs text-[#8FA19A]">
+        <div className="w-full h-full flex flex-col justify-between rounded-xl bg-[#000000] border border-white/10 p-5 font-mono text-xs text-[#A1A1AA]">
           <div className="space-y-3">
             <div className="flex items-center justify-between border-b border-white/5 pb-2">
               <span className="text-[#2DD4BF] font-bold">Slash Command Trigger</span>
@@ -56,24 +56,24 @@ export function HowItWorks() {
               </Badge>
             </div>
             <div className="space-y-1.5">
-              <div className="p-2 rounded bg-[#10B981]/15 border border-[#10B981]/30 text-[#F2F5F4] flex items-center justify-between">
+              <div className="p-2 rounded bg-[#10B981]/15 border border-[#10B981]/30 text-[#FAFAFA] flex items-center justify-between">
                 <span className="flex items-center gap-2">
                   <Sparkles className="h-3.5 w-3.5 text-[#10B981]" />
                   <span>/mdx &lt;LiveChart /&gt;</span>
                 </span>
                 <span className="text-[10px] text-[#10B981]">RETURN</span>
               </div>
-              <div className="p-2 rounded bg-white/5 text-[#8FA19A] flex items-center justify-between">
+              <div className="p-2 rounded bg-white/5 text-[#A1A1AA] flex items-center justify-between">
                 <span>/heading 2</span>
                 <span className="text-[10px]">H2</span>
               </div>
-              <div className="p-2 rounded bg-white/5 text-[#8FA19A] flex items-center justify-between">
+              <div className="p-2 rounded bg-white/5 text-[#A1A1AA] flex items-center justify-between">
                 <span>/checklist</span>
                 <span className="text-[10px]">[]</span>
               </div>
             </div>
           </div>
-          <div className="p-2.5 rounded-lg border border-white/10 bg-[#141B18] text-[#F2F5F4] text-[11px] flex items-center justify-between">
+          <div className="p-2.5 rounded-lg border border-white/10 bg-[#0A0A0A] text-[#FAFAFA] text-[11px] flex items-center justify-between">
             <span>&lt;Counter start=&#123;100&#125; /&gt;</span>
             <span className="text-[#10B981] font-bold">100 → Live</span>
           </div>
@@ -87,11 +87,11 @@ export function HowItWorks() {
         "Tag blocks across documents, run sub-millisecond fuzzy searches with ⌘K, and publish your notes to living documentation or export clean MDX files straight into your Next.js project.",
       icon: <LayoutGrid className="h-5 w-5" />,
       content: (
-        <div className="w-full h-full flex flex-col justify-between rounded-xl bg-[#0A0F0D] border border-white/10 p-5 font-mono text-xs text-[#8FA19A]">
+        <div className="w-full h-full flex flex-col justify-between rounded-xl bg-[#000000] border border-white/10 p-5 font-mono text-xs text-[#A1A1AA]">
           <div className="space-y-3">
             <div className="flex items-center justify-between border-b border-white/5 pb-2">
               <span className="text-[#10B981] font-bold">Vault Organization</span>
-              <span className="text-[10px] text-[#8FA19A]">Export Ready</span>
+              <span className="text-[10px] text-[#A1A1AA]">Export Ready</span>
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
@@ -105,15 +105,15 @@ export function HowItWorks() {
                   #v2.0
                 </Badge>
               </div>
-              <div className="p-3 rounded-lg bg-[#141B18] border border-white/5 space-y-1">
-                <div className="text-[#F2F5F4] font-semibold">Publish to Docs Site</div>
-                <div className="text-[11px] text-[#8FA19A]">
+              <div className="p-3 rounded-lg bg-[#0A0A0A] border border-white/5 space-y-1">
+                <div className="text-[#FAFAFA] font-semibold">Publish to Docs Site</div>
+                <div className="text-[11px] text-[#A1A1AA]">
                   docs.company.com/specs/v2
                 </div>
               </div>
             </div>
           </div>
-          <div className="p-2.5 rounded-lg bg-[#10B981] text-[#0A0F0D] font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
+          <div className="p-2.5 rounded-lg bg-[#10B981] text-[#000000] font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
             <span>Export to GitHub Repo</span>
             <ArrowRight className="h-3.5 w-3.5" />
           </div>
@@ -129,10 +129,10 @@ export function HowItWorks() {
           <Badge variant="emeraldGlow" className="mb-4">
             Simple 3-Step Flow
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F2F5F4] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#FAFAFA] tracking-tight">
             How NoteVault works
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#8FA19A] leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#A1A1AA] leading-relaxed">
             From quick brainstorm to live interactive product specs in three seamless steps.
           </p>
         </div>

@@ -56,7 +56,7 @@ export const BentoGridItem = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "row-span-1 rounded-3xl group/bento hover:shadow-2xl transition duration-300 shadow-input p-6 bg-[#141B18] border border-white/10 justify-between flex flex-col space-y-4 relative overflow-hidden hover:border-[#10B981]/40",
+        "row-span-1 rounded-3xl group/bento hover:shadow-2xl transition duration-300 shadow-input p-6 bg-[#0A0A0A] border border-white/[0.08] justify-between flex flex-col space-y-4 relative overflow-hidden hover:border-[#10B981]/40",
         className
       )}
     >
@@ -90,10 +90,10 @@ export const BentoGridItem = ({
             </span>
           )}
         </div>
-        <div className="font-bold text-[#F2F5F4] text-base mb-1 group-hover/bento:text-[#10B981] transition-colors">
+        <div className="font-bold text-[#FAFAFA] text-base mb-1 group-hover/bento:text-[#10B981] transition-colors">
           {title}
         </div>
-        <div className="font-normal text-[#8FA19A] text-xs leading-relaxed">
+        <div className="font-normal text-[#A1A1AA] text-xs leading-relaxed">
           {description}
         </div>
       </div>

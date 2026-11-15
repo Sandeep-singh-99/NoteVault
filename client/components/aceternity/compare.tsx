@@ -59,14 +59,14 @@ export const Compare = ({
       onMouseUp={() => setIsDragging(false)}
       onMouseLeave={() => setIsDragging(false)}
       className={cn(
-        "relative w-full h-[480px] sm:h-[520px] rounded-2xl overflow-hidden border border-white/10 bg-[#141B18] select-none shadow-2xl",
+        "relative w-full h-[480px] sm:h-[520px] rounded-2xl overflow-hidden border border-white/10 bg-[#0A0A0A] select-none shadow-2xl",
         className
       )}
     >
       {/* Second Content (Right side / Base layer: Live Rendered Output) */}
       <div
         className={cn(
-          "absolute inset-0 w-full h-full overflow-hidden bg-[#141B18]",
+          "absolute inset-0 w-full h-full overflow-hidden bg-[#0A0A0A]",
           secondContentClassname
         )}
       >
@@ -76,7 +76,7 @@ export const Compare = ({
       {/* First Content (Left side / Clipped overlay: Raw MDX Source) */}
       <div
         className={cn(
-          "absolute inset-0 w-full h-full overflow-hidden bg-[#0A0F0D]",
+          "absolute inset-0 w-full h-full overflow-hidden bg-[#000000]",
           firstContentClassName
         )}
         style={{
@@ -95,7 +95,7 @@ export const Compare = ({
           }}
         >
           {/* Circular Handlebar Button */}
-          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-8 w-8 rounded-full bg-[#10B981] text-[#0A0F0D] flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.8)] border border-white/40">
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-8 w-8 rounded-full bg-[#10B981] text-[#000000] flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.8)] border border-white/40">
             <GripVertical className="h-4 w-4" />
           </div>
         </div>

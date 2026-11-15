@@ -48,11 +48,11 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <div className="rounded-2xl h-full w-full p-6 overflow-hidden bg-[#141B18] border border-white/10 group-hover:border-[#10B981]/40 relative z-20">
-            <h4 className="text-[#F2F5F4] font-bold tracking-wide mt-2">
+          <div className="rounded-2xl h-full w-full p-6 overflow-hidden bg-[#0A0A0A] border border-white/10 group-hover:border-[#10B981]/40 relative z-20">
+            <h4 className="text-[#FAFAFA] font-bold tracking-wide mt-2">
               {item.title}
             </h4>
-            <p className="mt-4 text-[#8FA19A] tracking-wide leading-relaxed text-sm">
+            <p className="mt-4 text-[#A1A1AA] tracking-wide leading-relaxed text-sm">
               {item.description}
             </p>
           </div>

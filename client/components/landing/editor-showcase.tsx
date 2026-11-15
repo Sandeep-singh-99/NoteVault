@@ -36,27 +36,27 @@ export function EditorShowcase() {
   };
 
   return (
-    <section id="editor-showcase" className="py-24 sm:py-32 bg-[#0E1512]/40 border-y border-white/5 relative overflow-hidden">
+    <section id="editor-showcase" className="py-24 sm:py-32 bg-[#0A0A0A]/40 border-y border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="teal" className="mb-4">
             Aceternity Compare Slider
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F2F5F4] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#FAFAFA] tracking-tight">
             Slide to compare raw MDX vs live rendered output
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#8FA19A] leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#A1A1AA] leading-relaxed">
             Drag or hover across the slider below to see how raw Markdown blocks instantly transform into interactive, hydrated React components.
           </p>
 
           {/* Mode Switcher */}
-          <div className="mt-6 inline-flex p-1 rounded-xl bg-[#141B18] border border-white/10 text-xs">
+          <div className="mt-6 inline-flex p-1 rounded-xl bg-[#0A0A0A] border border-white/10 text-xs">
             <button
               onClick={() => setActiveTab("compare")}
               className={`px-3 py-1.5 rounded-lg font-medium transition-colors cursor-pointer ${
                 activeTab === "compare"
-                  ? "bg-[#10B981] text-[#0A0F0D] font-bold"
-                  : "text-[#8FA19A] hover:text-[#F2F5F4]"
+                  ? "bg-[#10B981] text-[#000000] font-bold"
+                  : "text-[#A1A1AA] hover:text-[#FAFAFA]"
               }`}
             >
               Compare Slider
@@ -65,8 +65,8 @@ export function EditorShowcase() {
               onClick={() => setActiveTab("mdx")}
               className={`px-3 py-1.5 rounded-lg font-medium transition-colors cursor-pointer ${
                 activeTab === "mdx"
-                  ? "bg-[#10B981] text-[#0A0F0D] font-bold"
-                  : "text-[#8FA19A] hover:text-[#F2F5F4]"
+                  ? "bg-[#10B981] text-[#000000] font-bold"
+                  : "text-[#A1A1AA] hover:text-[#FAFAFA]"
               }`}
             >
               Full MDX Source
@@ -75,8 +75,8 @@ export function EditorShowcase() {
               onClick={() => setActiveTab("ast")}
               className={`px-3 py-1.5 rounded-lg font-medium transition-colors cursor-pointer ${
                 activeTab === "ast"
-                  ? "bg-[#10B981] text-[#0A0F0D] font-bold"
-                  : "text-[#8FA19A] hover:text-[#F2F5F4]"
+                  ? "bg-[#10B981] text-[#000000] font-bold"
+                  : "text-[#A1A1AA] hover:text-[#FAFAFA]"
               }`}
             >
               Tiptap AST JSON
@@ -88,7 +88,7 @@ export function EditorShowcase() {
         {activeTab === "compare" && (
           <div className="relative">
             {/* Top Bar Indicators */}
-            <div className="flex items-center justify-between mb-3 px-2 text-xs font-mono text-[#8FA19A]">
+            <div className="flex items-center justify-between mb-3 px-2 text-xs font-mono text-[#A1A1AA]">
               <span className="flex items-center gap-1.5 text-[#10B981]">
                 <Code2 className="h-4 w-4" />
                 ◀ Raw MDX Source (Left)
@@ -104,7 +104,7 @@ export function EditorShowcase() {
               initialSliderPercentage={50}
               firstContent={
                 /* LEFT CONTENT: RAW MDX SOURCE */
-                <div className="w-full h-full p-6 sm:p-8 bg-[#0A0F0D] font-mono text-xs sm:text-sm text-[#8FA19A] leading-relaxed overflow-hidden">
+                <div className="w-full h-full p-6 sm:p-8 bg-[#000000] font-mono text-xs sm:text-sm text-[#A1A1AA] leading-relaxed overflow-hidden">
                   <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10 text-xs">
                     <span className="text-[#10B981] font-bold">
                       FILE: /specs/LiveTelemetryCard.mdx
@@ -115,17 +115,17 @@ export function EditorShowcase() {
                   <div className="space-y-1">
                     <div className="text-white/30">// Frontmatter & Props</div>
                     <div><span className="text-[#10B981]">---</span></div>
-                    <div><span className="text-[#2DD4BF]">title</span>: <span className="text-[#F2F5F4]">&quot;Cloud Service Health&quot;</span></div>
+                    <div><span className="text-[#2DD4BF]">title</span>: <span className="text-[#FAFAFA]">&quot;Cloud Service Health&quot;</span></div>
                     <div><span className="text-[#2DD4BF]">status</span>: <span className="text-[#10B981]">&quot;operational&quot;</span></div>
                     <div><span className="text-[#10B981]">---</span></div>
                     <div className="py-1" />
                     <div><span className="text-[#10B981]">## Real-Time Infrastructure Status</span></div>
-                    <div className="text-[#8FA19A]">Everything is functioning smoothly across all edge nodes:</div>
+                    <div className="text-[#A1A1AA]">Everything is functioning smoothly across all edge nodes:</div>
                     <div className="py-1" />
                     <div className="text-white/30">// Embedded Live React Component</div>
                     <div><span className="text-[#10B981]">&lt;</span><span className="text-[#2DD4BF]">TelemetryBadge</span></div>
-                    <div className="pl-4"><span className="text-[#F2F5F4]">latency</span>=<span className="text-[#10B981]">&quot;18ms&quot;</span></div>
-                    <div className="pl-4"><span className="text-[#F2F5F4]">uptime</span>=<span className="text-[#10B981]">&quot;99.99%&quot;</span></div>
+                    <div className="pl-4"><span className="text-[#FAFAFA]">latency</span>=<span className="text-[#10B981]">&quot;18ms&quot;</span></div>
+                    <div className="pl-4"><span className="text-[#FAFAFA]">uptime</span>=<span className="text-[#10B981]">&quot;99.99%&quot;</span></div>
                     <div><span className="text-[#10B981]">/&gt;</span></div>
                     <div className="py-1" />
                     <div><span className="text-[#10B981]">&gt;</span> [!NOTE] All clusters synced via CRDT.</div>
@@ -136,9 +136,9 @@ export function EditorShowcase() {
               }
               secondContent={
                 /* RIGHT CONTENT: LIVE RENDERED REACT PREVIEW */
-                <div className="w-full h-full p-6 sm:p-8 bg-[#141B18] flex flex-col justify-between">
+                <div className="w-full h-full p-6 sm:p-8 bg-[#0A0A0A] flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10 text-xs font-mono text-[#8FA19A]">
+                    <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10 text-xs font-mono text-[#A1A1AA]">
                       <span className="text-[#2DD4BF] font-bold">
                         [LIVE HYDRATED REACT VIEW]
                       </span>
@@ -147,19 +147,19 @@ export function EditorShowcase() {
                       </Badge>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#F2F5F4] tracking-tight">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#FAFAFA] tracking-tight">
                       Real-Time Infrastructure Status
                     </h3>
-                    <p className="mt-1 text-xs sm:text-sm text-[#8FA19A] leading-relaxed">
+                    <p className="mt-1 text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
                       Everything is functioning smoothly across all edge nodes:
                     </p>
 
                     {/* Rendered Telemetry Widget */}
-                    <div className="my-4 p-4 rounded-xl border border-[#10B981]/40 bg-[#0A0F0D] shadow-xl">
+                    <div className="my-4 p-4 rounded-xl border border-[#10B981]/40 bg-[#000000] shadow-xl">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <span className="h-2 w-2 rounded-full bg-[#10B981] animate-ping" />
-                          <span className="font-semibold text-xs sm:text-sm text-[#F2F5F4]">
+                          <span className="font-semibold text-xs sm:text-sm text-[#FAFAFA]">
                             Global Gateway Cluster
                           </span>
                         </div>
@@ -170,25 +170,25 @@ export function EditorShowcase() {
 
                       <div className="grid grid-cols-2 gap-3 pt-2 border-t border-white/5 text-xs font-mono">
                         <div>
-                          <span className="text-[#8FA19A]">P99 Latency: </span>
+                          <span className="text-[#A1A1AA]">P99 Latency: </span>
                           <span className="text-[#10B981] font-bold">18ms</span>
                         </div>
                         <div>
-                          <span className="text-[#8FA19A]">Uptime: </span>
+                          <span className="text-[#A1A1AA]">Uptime: </span>
                           <span className="text-[#2DD4BF] font-bold">99.99%</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Note callout */}
-                    <div className="p-3 rounded-xl border border-[#10B981]/30 bg-[#10B981]/10 text-xs text-[#F2F5F4] flex items-center gap-2.5 mb-3">
+                    <div className="p-3 rounded-xl border border-[#10B981]/30 bg-[#10B981]/10 text-xs text-[#FAFAFA] flex items-center gap-2.5 mb-3">
                       <Sparkles className="h-4 w-4 text-[#10B981] shrink-0" />
                       <span>
                         <strong className="text-[#10B981]">Note:</strong> All clusters synced via CRDT with zero data loss.
                       </span>
                     </div>
 
-                    <div className="space-y-1 text-xs text-[#F2F5F4]">
+                    <div className="space-y-1 text-xs text-[#FAFAFA]">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="h-3.5 w-3.5 text-[#10B981]" />
                         <span>Automated failover tested</span>
@@ -202,13 +202,13 @@ export function EditorShowcase() {
 
                   {/* Interactive Button */}
                   <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
-                    <span className="text-[#8FA19A]">Test interactive state:</span>
+                    <span className="text-[#A1A1AA]">Test interactive state:</span>
                     <button
                       onClick={handleToggleLike}
                       className={`flex items-center gap-2 px-3 py-1 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
                         hasLiked
-                          ? "bg-[#10B981] text-[#0A0F0D] border-[#10B981]"
-                          : "border-white/10 bg-white/5 text-[#F2F5F4] hover:border-[#10B981]/40"
+                          ? "bg-[#10B981] text-[#000000] border-[#10B981]"
+                          : "border-white/10 bg-white/5 text-[#FAFAFA] hover:border-[#10B981]/40"
                       }`}
                     >
                       <span>▲ Upvote Spec</span>
@@ -222,8 +222,8 @@ export function EditorShowcase() {
         )}
 
         {activeTab === "mdx" && (
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#0A0F0D] border border-white/10 font-mono text-xs sm:text-sm text-[#8FA19A] leading-relaxed overflow-x-auto min-h-[460px]">
-            <pre className="text-[#8FA19A]">
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#000000] border border-white/10 font-mono text-xs sm:text-sm text-[#A1A1AA] leading-relaxed overflow-x-auto min-h-[460px]">
+            <pre className="text-[#A1A1AA]">
               <span className="text-[#10B981]">---</span>{"\n"}
               <span className="text-[#2DD4BF]">title</span>: &quot;Cloud Service Health&quot;{"\n"}
               <span className="text-[#2DD4BF]">status</span>: &quot;operational&quot;{"\n"}
@@ -232,9 +232,9 @@ export function EditorShowcase() {
               Everything is functioning smoothly across all edge nodes:{"\n\n"}
               <span className="text-[#10B981]">&lt;</span>
               <span className="text-[#2DD4BF]">TelemetryBadge</span>{" "}
-              <span className="text-[#F2F5F4]">latency</span>=
+              <span className="text-[#FAFAFA]">latency</span>=
               <span className="text-[#10B981]">&quot;18ms&quot;</span>{" "}
-              <span className="text-[#F2F5F4]">uptime</span>=
+              <span className="text-[#FAFAFA]">uptime</span>=
               <span className="text-[#10B981]">&quot;99.99%&quot;</span>{" "}
               <span className="text-[#10B981]">/&gt;</span>{"\n\n"}
               <span className="text-[#10B981]">&gt;</span> [!NOTE] All clusters synced via CRDT.{"\n\n"}
@@ -245,8 +245,8 @@ export function EditorShowcase() {
         )}
 
         {activeTab === "ast" && (
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#0A0F0D] border border-white/10 font-mono text-xs text-[#8FA19A] leading-relaxed overflow-x-auto min-h-[460px]">
-            <pre className="text-[#8FA19A]">
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#000000] border border-white/10 font-mono text-xs text-[#A1A1AA] leading-relaxed overflow-x-auto min-h-[460px]">
+            <pre className="text-[#A1A1AA]">
               &#123;{"\n"}
               {"  "}<span className="text-[#2DD4BF]">&quot;type&quot;</span>: <span className="text-[#10B981]">&quot;doc&quot;</span>,{"\n"}
               {"  "}<span className="text-[#2DD4BF]">&quot;content&quot;</span>: [&#123;{"\n"}
