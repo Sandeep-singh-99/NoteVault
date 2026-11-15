@@ -190,8 +190,11 @@ export function ProductPreview() {
                     <div className="text-[10px] text-[#A1A1AA] font-mono uppercase tracking-wider">
                       Processed AST Blocks
                     </div>
-                    <div className="text-2xl font-bold font-mono text-[#FAFAFA]">
-                      {counter.toLocaleString()}
+                    <div
+                      suppressHydrationWarning
+                      className="text-2xl font-bold font-mono text-[#FAFAFA]"
+                    >
+                      {counter.toLocaleString("en-US")}
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
