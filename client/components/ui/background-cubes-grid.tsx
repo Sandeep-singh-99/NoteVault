@@ -605,7 +605,7 @@ function createPerspectiveScene(
     options;
   let width = container.clientWidth;
   let height = container.clientHeight;
-  let pixelRatio = Math.min(window.devicePixelRatio, 2);
+  let pixelRatio = Math.min(window.devicePixelRatio, 1.5);
 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(backgroundColor);
@@ -627,11 +627,10 @@ function createPerspectiveScene(
   };
   updateCamera(0, 0);
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: "high-performance" });
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.3;
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFShadowMap;
+  renderer.shadowMap.enabled = false;
   renderer.setSize(width, height, false);
   renderer.setPixelRatio(pixelRatio);
 
@@ -642,19 +641,9 @@ function createPerspectiveScene(
   composer.setSize(width, height);
   composer.setPixelRatio(pixelRatio);
 
-  scene.add(new THREE.AmbientLight("#ffffff", 0.35));
-  const keyLight = new THREE.DirectionalLight("#ffffff", 3.0);
+  scene.add(new THREE.AmbientLight("#ffffff", 0.45));
+  const keyLight = new THREE.DirectionalLight("#ffffff", 2.8);
   keyLight.position.set(-20, 12, -6);
-  keyLight.castShadow = true;
-  keyLight.shadow.mapSize.set(1024, 1024);
-  keyLight.shadow.radius = 6;
-  keyLight.shadow.camera.near = 0.1;
-  keyLight.shadow.camera.far = 60;
-  keyLight.shadow.camera.left = -22;
-  keyLight.shadow.camera.right = 22;
-  keyLight.shadow.camera.top = 22;
-  keyLight.shadow.camera.bottom = -22;
-  keyLight.shadow.bias = 0.0001;
   scene.add(keyLight);
   const rimLight = new THREE.DirectionalLight(waveColor, 1.2);
   rimLight.position.set(12, 4, 10);
@@ -757,8 +746,6 @@ function createPerspectiveScene(
 
   const mesh = new THREE.InstancedMesh(geometry, material, count);
   mesh.customDepthMaterial = depthMaterial;
-  mesh.castShadow = true;
-  mesh.receiveShadow = true;
   scene.add(mesh);
 
   const dummy = new THREE.Object3D();
@@ -893,8 +880,21 @@ function PerspectiveCubes({
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const updateRef = useRef<((delta: number) => void) | null>(null);
+  const isVisibleRef = useRef(true);
   const reduceMotion = useReducedMotion();
   const idle = idleRipples && !reduceMotion;
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!canvasRef.current || !containerRef.current) return;
@@ -917,6 +917,7 @@ function PerspectiveCubes({
   }, [gridSize, gap, baseColor, waveColor, backgroundColor, glow, amplitude, tilt, idle]);
 
   useAnimationFrame((_, delta) => {
+    if (!isVisibleRef.current) return;
     updateRef.current?.(Math.min(delta / 1000, 0.1));
   });
 

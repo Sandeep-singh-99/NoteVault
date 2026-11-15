@@ -82,10 +82,10 @@ export const Card = ({
       style={{
         rotateX: rotate,
         scale,
-        boxShadow:
-          "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
+        willChange: "transform",
+        transformStyle: "preserve-3d",
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[32rem] sm:h-[38rem] md:h-[42rem] w-full border-4 border-white/10 p-1.5 sm:p-3 bg-[#0A0A0A] rounded-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(16,185,129,0.12)] hover:border-[#10B981]/40 transition-colors"
+      className="max-w-5xl -mt-12 mx-auto h-[32rem] sm:h-[38rem] md:h-[42rem] w-full border-4 border-white/10 p-1.5 sm:p-3 bg-[#0A0A0A] rounded-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_30px_rgba(16,185,129,0.12)] hover:border-[#10B981]/40 transition-colors transform-gpu"
     >
       <div className="h-full w-full overflow-hidden rounded-2xl bg-[#000000] border border-white/5">
         {children}
