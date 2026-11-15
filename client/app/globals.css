@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #0A0F0D;
+  --color-surface: #141B18;
+  --color-surface-hover: #192420;
+  --color-surface-elevated: #1B2420;
+  --color-accent: #10B981;
+  --color-accent-hover: #059669;
+  --color-accent-muted: rgba(16, 185, 129, 0.15);
+  --color-teal: #2DD4BF;
+  --color-text-heading: #F2F5F4;
+  --color-text-body: #8FA19A;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-emerald: rgba(16, 185, 129, 0.3);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0F0D;
+  --foreground: #F2F5F4;
+  --surface: #141B18;
+  --surface-hover: #192420;
+  --accent: #10B981;
+  --accent-hover: #059669;
+  --teal: #2DD4BF;
+  --text-heading: #F2F5F4;
+  --text-body: #8FA19A;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --card: #141B18;
+  --card-foreground: #F2F5F4;
+  --popover: #141B18;
+  --popover-foreground: #F2F5F4;
+  --primary: #10B981;
+  --primary-foreground: #0A0F0D;
+  --secondary: #192420;
+  --secondary-foreground: #F2F5F4;
+  --muted: #192420;
+  --muted-foreground: #8FA19A;
+  --destructive: #EF4444;
+  --destructive-foreground: #F2F5F4;
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #10B981;
+  --radius: 0.875rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0A0F0D;
+  color: #8FA19A;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #10B981;
+  color: #0A0F0D;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0F0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #192420;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #25332e;
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  background: rgba(10, 15, 13, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(20, 27, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.emerald-glow-sm {
+  box-shadow: 0 0 20px -5px rgba(16, 185, 129, 0.25);
+}
+
+.emerald-glow-md {
+  box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.35);
+}
+
+.emerald-glow-lg {
+  box-shadow: 0 0 60px -10px rgba(16, 185, 129, 0.3);
+}
+
+/* Subtle grid overlay */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 6s ease-in-out infinite;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
