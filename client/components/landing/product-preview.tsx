@@ -43,7 +43,7 @@ export function ProductPreview() {
   };
 
   return (
-    <section id="product-preview" className="relative -mt-10 sm:-mt-16 overflow-hidden bg-[#000000]">
+    <section id="product-preview" className="relative pt-12 sm:pt-20 overflow-hidden bg-[#000000]">
       <ContainerScroll
         titleComponent={
           <div className="flex flex-col items-center space-y-3">

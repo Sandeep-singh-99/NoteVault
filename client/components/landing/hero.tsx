@@ -21,7 +21,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-[#000000] pt-24 pb-16 sm:pt-28 sm:pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full h-screen h-[100dvh] min-h-[640px] flex flex-col justify-center items-center overflow-hidden bg-[#000000] px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
       {/* Aceternity UI: Background Cubes Grid (Official 3D Perspective Grid with Emerald Wave Animation) */}
       <BackgroundCubesGrid
         variant="perspective"
