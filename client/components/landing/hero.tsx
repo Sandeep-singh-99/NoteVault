@@ -2,9 +2,8 @@
 
 import React, { useState } from "react";
 import { ArrowRight, Play, CheckCircle2, Shield, Zap } from "lucide-react";
-import { FlipWords } from "@/components/aceternity/flip-words";
-import { HeroHighlight, Highlight } from "@/components/aceternity/hero-highlight";
-import { MovingBorderButton } from "@/components/aceternity/moving-border";
+import { FlipWords } from "@/components/ui/flip-words";
+import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 import { BackgroundCubesGrid } from "@/components/ui/background-cubes-grid";
 import { AuthModal } from "@/components/landing/auth-modal";
 import { DemoModal } from "@/components/landing/demo-modal";
@@ -33,7 +32,7 @@ export function Hero() {
         glow={1.2}
         amplitude={0.65}
         tilt={0.74}
-        idleRipples={true}
+        idleRipples={false}
         className="opacity-75 z-0"
       />
 
@@ -49,7 +48,7 @@ export function Hero() {
               </span>
             </div>
 
-            {/* Headline with Flip Words and Hero Highlight */}
+            {/* Headline with Flip Words */}
             <div className="my-2">
               <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#FAFAFA] leading-[1.18] sm:leading-[1.14] text-balance">
                 <span>Where thoughts become</span>{" "}
@@ -58,11 +57,7 @@ export function Hero() {
                   className="text-[#10B981] font-black"
                 />
                 <br />
-                <HeroHighlight containerClassName="inline-block my-1">
-                  <Highlight className="text-[#000000] bg-gradient-to-r from-[#10B981] to-[#2DD4BF]">
-                    Powered by MDX.
-                  </Highlight>
-                </HeroHighlight>
+                <span className="text-[#10B981]">Powered by MDX.</span>
               </h1>
             </div>
 

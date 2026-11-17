@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, MessageSquare } from "lucide-react";
 import { GithubIcon, TwitterIcon, YoutubeIcon } from "@/components/ui/icons";
-import { TextHoverEffect } from "@/components/aceternity/text-hover-effect";
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 export function Footer() {
   const columns = [

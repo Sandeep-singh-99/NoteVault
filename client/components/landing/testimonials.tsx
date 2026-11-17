@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
-import { InfiniteMovingCards } from "@/components/aceternity/infinite-moving-cards";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 export function Testimonials() {
   const testimonials = [

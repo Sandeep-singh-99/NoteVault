@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { StickyScroll } from "@/components/aceternity/sticky-scroll-reveal";
-import { FolderPlus, PenTool, LayoutGrid, Check, Sparkles, Code2, Tag, ArrowRight } from "lucide-react";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import { FolderPlus, PenTool, LayoutGrid, Check, Sparkles, Folder, FileText, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function HowItWorks() {
@@ -22,14 +22,14 @@ export function HowItWorks() {
             </div>
             <div className="space-y-2">
               <div className="p-2.5 rounded-lg bg-[#0A0A0A] border border-[#10B981]/30 text-[#FAFAFA] flex items-center justify-between">
-                <span>📁 ~/engineering/core-specs</span>
+                <span className="flex min-w-0 items-center gap-2"><Folder aria-hidden="true" className="h-4 w-4 shrink-0" /><span className="truncate">~/engineering/core-specs</span></span>
                 <span className="text-[#10B981] text-[10px]">INITIALIZED</span>
               </div>
               <div className="p-2.5 rounded-lg bg-[#0A0A0A]/40 border border-white/5 text-[#A1A1AA]">
-                <span>📄 architecture-rfc.mdx</span>
+                <span className="flex items-center gap-2"><FileText aria-hidden="true" className="h-4 w-4 shrink-0" />architecture-rfc.mdx</span>
               </div>
               <div className="p-2.5 rounded-lg bg-[#0A0A0A]/40 border border-white/5 text-[#A1A1AA]">
-                <span>📄 sprint-24-metrics.mdx</span>
+                <span className="flex items-center gap-2"><FileText aria-hidden="true" className="h-4 w-4 shrink-0" />sprint-24-metrics.mdx</span>
               </div>
             </div>
           </div>

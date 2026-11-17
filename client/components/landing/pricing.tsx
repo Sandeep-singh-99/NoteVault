@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Check, Sparkles, ArrowRight, Zap, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { BackgroundGradient } from "@/components/aceternity/background-gradient";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { AuthModal } from "@/components/landing/auth-modal";
 
 export function Pricing() {

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FloatingNav, NavItem } from "@/components/aceternity/floating-navbar";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 import { CommandMenu } from "@/components/ui/command-menu";
 import { AuthModal } from "@/components/landing/auth-modal";
 
@@ -9,7 +9,7 @@ export function Navbar() {
   const [commandOpen, setCommandOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
 
-  const navItems: NavItem[] = [
+  const navItems = [
     { name: "Features", link: "#features" },
     { name: "Preview", link: "#product-preview" },
     { name: "Compare", link: "#editor-showcase" },
@@ -21,10 +21,14 @@ export function Navbar() {
     <>
       <FloatingNav
         navItems={navItems}
-        onSearchClick={() => setCommandOpen(true)}
-        onSignInClick={() => setAuthOpen(true)}
-        onGetStartedClick={() => setAuthOpen(true)}
-      />
+        className="top-4 max-w-[96vw]"
+      >
+        <div className="flex shrink-0 items-center gap-2">
+          <button aria-label="Search documentation" onClick={() => setCommandOpen(true)} className="rounded-full px-3 py-2 text-sm text-neutral-300 hover:text-white">Search</button>
+          <button onClick={() => setAuthOpen(true)} className="whitespace-nowrap rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-black">Get started</button>
+          <button onClick={() => setAuthOpen(true)} className="hidden whitespace-nowrap px-3 py-2 text-sm sm:block">Sign in</button>
+        </div>
+      </FloatingNav>
 
       {/* Global Modals */}
       <CommandMenu open={commandOpen} onOpenChange={setCommandOpen} />

@@ -12,7 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Compare } from "@/components/aceternity/compare";
+import { Compare } from "@/components/ui/compare";
 
 export function EditorShowcase() {
   const [copied, setCopied] = useState(false);
@@ -100,6 +100,7 @@ export function EditorShowcase() {
             </div>
 
             <Compare
+              className="h-[520px] w-full"
               slideMode="hover"
               initialSliderPercentage={50}
               firstContent={

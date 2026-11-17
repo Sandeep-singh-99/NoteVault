@@ -14,8 +14,8 @@ import {
   Plus,
   GitBranch,
 } from "lucide-react";
-import { BentoGrid, BentoGridItem } from "@/components/aceternity/bento-grid";
-import { PlaceholdersAndVanishInput } from "@/components/aceternity/placeholders-and-vanish-input";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { Badge } from "@/components/ui/badge";
 
 export function FeaturesGrid() {
@@ -67,12 +67,11 @@ export function FeaturesGrid() {
         </div>
 
         {/* Aceternity Bento Grid with Varied Spans & Animated Visuals */}
-        <BentoGrid>
+        <BentoGrid className="md:auto-rows-[22rem]">
           {/* Card 1: Tiptap Block Editor (span 2) */}
           <BentoGridItem
             className="md:col-span-2"
             title="Tiptap Block Editor"
-            badge="Draggable Nodes"
             description="Every paragraph, header, and table is an independent draggable block node. Reorder effortlessly with multi-level nesting and sub-millisecond typing."
             icon={<Blocks className="h-5 w-5" />}
             header={
@@ -108,7 +107,6 @@ export function FeaturesGrid() {
           <BentoGridItem
             className="md:col-span-1"
             title="Full MDX Support"
-            badge="React 19"
             description="Embed live interactive React components directly into your markdown. Props and states compile in real time."
             icon={<Code2 className="h-5 w-5" />}
             header={
@@ -144,7 +142,6 @@ export function FeaturesGrid() {
           <BentoGridItem
             className="md:col-span-1"
             title="Smart Slash Commands"
-            badge="Keyboard First"
             description="Summon block types, drop JSX widgets, or format callouts with a single keystroke without leaving your keyboard."
             icon={<Sparkles className="h-5 w-5" />}
             header={
@@ -178,7 +175,6 @@ export function FeaturesGrid() {
           <BentoGridItem
             className="md:col-span-2"
             title="Instant Fuzzy Search"
-            badge="⌘K Vanish Search"
             description="Search thousands of notes, blocks, and code snippets in sub-millisecond time. Powered by client-side IndexedDB indexes."
             icon={<Search className="h-5 w-5" />}
             header={
@@ -190,6 +186,7 @@ export function FeaturesGrid() {
                   </div>
                   <PlaceholdersAndVanishInput
                     placeholders={searchPlaceholders}
+                    onChange={() => {}}
                     onSubmit={(e) => e.preventDefault()}
                   />
                   <div className="mt-3 flex items-center justify-between text-[10px] font-mono text-[#A1A1AA] px-1">
@@ -205,7 +202,6 @@ export function FeaturesGrid() {
           <BentoGridItem
             className="md:col-span-1"
             title="Dark-First Precision"
-            badge="#000000 Canvas"
             description="Calibrated contrast engineered specifically to eliminate eye strain during midnight programming sessions."
             icon={<Moon className="h-5 w-5" />}
             header={
@@ -239,7 +235,6 @@ export function FeaturesGrid() {
           <BentoGridItem
             className="md:col-span-2"
             title="Bi-Directional Markdown I/O"
-            badge="Zero Lock-In"
             description="Export to clean CommonMark, MDX bundles, or auto-sync directly into your GitHub branches with automated pull requests."
             icon={<ArrowDownToLine className="h-5 w-5" />}
             header={
