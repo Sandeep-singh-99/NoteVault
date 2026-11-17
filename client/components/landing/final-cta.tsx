@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2, Sparkles, ShieldCheck } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { LampContainer } from "@/components/ui/lamp";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function FinalCTA() {
   const [email, setEmail] = useState("");
