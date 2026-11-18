@@ -21,7 +21,7 @@ function SectionDivider() {
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#000000] text-[#A1A1AA] flex flex-col selection:bg-[#10B981] selection:text-[#000000]">
-      {/* 1. Aceternity Floating Navbar */}
+      {/* 1. Landing Navbar */}
       <Navbar />
 
       <main className="flex-1">
